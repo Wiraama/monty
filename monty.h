@@ -21,9 +21,6 @@ typedef struct stack_s
 #include <stdlib.h>
 #include <unistd.h>
 
-/******************PROTOTYPES***********************/
-void push(int value);
-
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -37,3 +34,9 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+/**************************PROTOTYPES**********************************/
+
+void pall(int *stack, int n);
+void push(int value);
+
+#endif /* MONTY_H */
