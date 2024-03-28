@@ -56,7 +56,7 @@ typedef struct bus_s
 extern bus_t bus;
 /**************************PROTOTYPES**********************************/
 
-void pall(stack_t **head)
-void push(slack_t **head, int args)
+void pall(stack_t **head);
+void push(stack_t **head, unsigned int count);
 
 #endif /* MONTY_H */
