@@ -1,17 +1,22 @@
 #include "monty.h"
 
-void pall(int *stack, int n)
+/**
+ * pall - main entry point
+ * @head: first slack
+ *
+ * Return: anything
+ */
+
+void pall(stack_t **head)
 {
-	int i;
+	stack_t *h;
 
-	/**satck not empty**/
-	if (n == -1)
-	{
+	h = *head;
+	if (h == NULL)
 		return;
-	}
-
-	for (i = n; i >= 0; i--)
+	while (h != NULL)
 	{
-		printf("%d\n", stack[i]);
+		printf("%d\n", h->n);
+		h = h-next;
 	}
 }

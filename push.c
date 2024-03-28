@@ -1,15 +1,15 @@
 #include "monty.h"
 
-void push(int value)
+void push(slack_t **head, int args)
 {
-	extern int n = -1;
-	extern int stack[LIMIT];
+	slack_t *h;
 
-	if (n == LIMIT - 1)
+	if ((args == NULL) || args != (int)args)
 	{
-		printf("stack overflow\n");
+		printf("L<line_number>: usage: push integer");
 		exit(EXIT_FAILURE);
 	}
 
-	stack[++top] = value;
+	*head = h->n;
+	h = *head;
 }

@@ -19,8 +19,11 @@ typedef struct stack_s
 #define LIMIT 100
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/types.h>
 #include <unistd.h>
-
+#include <fcntl.h>
+#include <string.h>
+#include <ctype.h>
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -34,9 +37,26 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+/**
+ * bus_s variables
+ * @arg: argumunt
+ * @file: pointer to file
+ * @content: line content in file
+ * @lifi: ...
+ */
+typedef struct bus_s
+{
+	char arg;
+	FILE *file;
+	char *content;
+	int lifi;
+} bus_t;
+
+extern bus_t bus;
 /**************************PROTOTYPES**********************************/
 
-void pall(int *stack, int n);
-void push(int value);
+void pall(stack_t **head)
+void push(slack_t **head, int args)
 
 #endif /* MONTY_H */
