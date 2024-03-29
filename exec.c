@@ -2,15 +2,14 @@
 
 /**
  * execute - execute opcode
+ * @stack: stack of linked list
  * @counter: line counter
  * @file: pointer to monty file stream
  * @content: line content
  * Return: none
  */
-int execute(char *content, unsigned int counter, FILE *file)
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
-	stack_t **stack;
-
 	instruction_t opst[] = {
 		{"push", f_push},
 		{"pall", f_pall},

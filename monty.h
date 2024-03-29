@@ -65,7 +65,7 @@ ssize_t getstdin(char **lineptr, int file);
 char  *clean_line(char *content);
 void free_stack(stack_t *head);
 
-int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
 
 void f_push(stack_t **head, unsigned int number);
 void f_pall(stack_t **head, unsigned int number);
