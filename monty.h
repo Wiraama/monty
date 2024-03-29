@@ -56,6 +56,23 @@ typedef struct bus_s
 extern bus_t bus;
 /**************************PROTOTYPES**********************************/
 
+void swap(stack_t **head, unsigned int counter);
+void sub(stack_t **head, unsigned int counter);
+void stack(stack_t **head, unsigned int counter);
+void rotl(stack_t **head,  __attribute__((unused)) unsigned int counter);
+void rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void queue(stack_t **head, unsigned int counter);
+void add_queue(stack_t **head, int n);
+void pchar(stack_t **head, unsigned int counter);
+void nop(stack_t **head, unsigned int counter);
+void free_stack(stack_t *head);
+void mod(stack_t **head, unsigned int counter);
+void mul(stack_t **head, unsigned int counter);
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
+void f_div(stack_t **head, unsigned int count);
+void add_node(stack_t **head, int n);
+void add(stack_t **head, unsigned int count);
+void pop(stack_t **head, unsigned int count);
 void pall(stack_t **head);
 void push(stack_t **head, unsigned int count);
 
