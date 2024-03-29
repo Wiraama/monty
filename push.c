@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void push(stack_t **head, unsigned int counter)
+void push(stack_t **head, unsigned int count)
 {
 	int i, m = 0, flag = 0;
 
