@@ -1,9 +1,9 @@
 #include "monty.h"
 
 /**
- * push _ maint entry point
- * @head: first node
- * @count: counts number f arguments
+ * push - main entry point
+ * @heads: first node
+ * @count: variable
  */
 
 void push(stack_t **head, unsigned int count)
@@ -15,9 +15,9 @@ void push(stack_t **head, unsigned int count)
 	{
 		if (bus.arg[0] == '-')
 			index++;
-		for (; bus.arg != '\0'; index++)
+		for (i = 0; bus.arg != '\0'; i++)
 		{
-			if (bus.arg[index] > 57 || bus.arg[index] < 48)
+			if (bus.arg[i] >57 || bus.arg[i] < 48)
 				flag = 1;
 		}
 		if (flag == 1)
