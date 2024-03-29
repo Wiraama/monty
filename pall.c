@@ -1,12 +1,11 @@
 #include "monty.h"
 
-/**
- * pall - main entry point
- * @head: first slack
- *
- * Return: anything
- */
-
+ /**
+  * pall - main entry point
+  * @head: first node in stack
+  *
+  * Return: nothing
+  */
 void pall(stack_t **head)
 {
 	stack_t *h;
@@ -14,9 +13,9 @@ void pall(stack_t **head)
 	h = *head;
 	if (h == NULL)
 		return;
-	while (h != NULL)
+	while (h)
 	{
 		printf("%d\n", h->n);
-		h = h-next;
+		h = h->next;
 	}
 }
